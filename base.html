@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+* {margin:0;
+padding:0;}
+#dibujo {
+	padding: 1.7% 20px;
+	background-image:url(menu.svg);
+	background-size:contain;
+	background-color:#0C9;
+	background-repeat:no-repeat;
+	position:fixed }
+#menu {
+	position:relative;
+	margin-left: 3%;
+	background-color:#CF0;
+	display: inline-block;
+	list-style:none;
+	display:none;
+	padding: 0.9%;
+}
+	#toggle:checked ~ ul {
+		display:inline-block}
+		#toggle {display:none}
+</style>
+
+</head>
+<body>
+<header>Vicky y Dany</header>
+    <nav class="dropdown">
+  <label id="dibujo" for="toggle"></label>
+ <input type="checkbox" id="toggle">
+   
+	<ul id="menu"> 
+        <li>Sesion de fotos 1er año</li>
+        <li id="chanar" onclick="cambiagaleria()">En chañar</li>
+        <li>En el bosque</li>
+        <li>En la playa</li>
+        <li>En el zoo</li>
+            </ul>
+
+</body>
+</html>
