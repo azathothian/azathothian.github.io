@@ -70,28 +70,8 @@ padding:0;}
         border-bottom-style: solid;
         border-bottom-color: #7e7683}
     
-    #galeria {
-    width: 100%; 
-        position: absolute;
-        overflow: hidden;
-        z-index: -1;
-        border: none;
-    }
-    footer {
-        position: relative;
-              margin-top: 280%
-    }
-    
  
     </style>
-    <script>
-    function cambiagaleria(gasa) {
-       var gasa;
-        document.getElementById('galeria').src = gasa;
-
-    }
-        
-    </script>
 </head>
 <body>
 <header class="w3-container">Vicky y Dany</header>
@@ -101,13 +81,22 @@ padding:0;}
    
 	<ul id="menu" class="w3-container"> 
         <li>Sesion de fotos 1er año</li>
-        <li id="chanar" onclick="cambiagaleria('cha.html')">En chañar</li>
+        <li id="chanar" onclick="cambiagaleria(chanar)">En chañar</li>
         <li>En el bosque</li>
         <li>En la playa</li>
-        <li id="zoo" onclick="cambiagaleria('zoo.html')">En el zoo</li>
+        <li id="zoo" onclick="cambiagaleria(zoo)">En el zoo</li>
         </ul></nav>
             <section class="w3-container" id="galeriacha">
-<iframe id="galeria" height="550%" width="100%"></iframe>
+<img class="fotos" src="cha1.jpg"><br>
+<img class="fotos" src="cha2.jpg"><br>
+<img class="fotos" src="cha3.jpg"><br>
+<img class="fotos" src="cha4.jpg"><br>
+            </section>
+    <section class="w3-container" id="galeriazoo">
+<img class="fotos" src="zoo1.jpg"><br>
+<img class="fotos" src="zoo2.jpg"><br>
+<img class="fotos" src="zoo3.jpg"><br>
+<img class="fotos" src="zoo4.jpg"><br>
             </section>
     <footer class="w3-container"><a href="#top"><img id="piefoto" src="menu.svg"></a></footer>
 
