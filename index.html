@@ -2,54 +2,94 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Griffy" rel="stylesheet">
+<title>Vicky y Dany</title>
+<link rel="stylesheet" href="w3.css">
 <style>
 * {margin:0;
 padding:0;}
+    
+    body {
+        background-color: #8e8793
+    }
+    
 #dibujo {
-	padding: 1.7% 20px;
+	padding: 10% 20px;
 	background-image:url(menu.svg);
 	background-size:contain;
-	background-color:#0C9;
 	background-repeat:no-repeat;
-	position:fixed }
+	position:fixed;
+    width: 10%;
+    opacity: 0.5}
+    
 #menu {
-	position:relative;
-	margin-left: 3%;
-	background-color:#CF0;
+	position:fixed;
+	margin-left: 2%;
+    margin-top: 10%;
+	background-color:#7e7683;
 	display: inline-block;
 	list-style:none;
 	display:none;
 	padding: 0.9%;
+    font-family: Griffy;
+    font-size: 2em;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    
 }
 	#toggle:checked ~ ul {
 		display:inline-block}
 		#toggle {display:none}
-		#galeria {
-			margin:auto;
+		
+    #galeria { width: 80%;
+       			margin:auto;
+        text-align: center
 		}
+    #piefoto {
+        margin-right: 1%;
+        margin-bottom: 1%;
+        float: right;
+        width: 10%;
+        opacity: .5;
+    }
+    
+    .fotos {
+        width: 100%;
+        border-radius: 10%;
+        margin-top: 2%;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #6f6476
+    }
+    header {
+        font-family: Griffy;
+        text-align: center;
+        font-size: 3em;
+        border-bottom-style: solid;
+        border-bottom-color: #7e7683
 </style>
 
 </head>
 <body>
-<header>Vicky y Dany</header>
+<header class="w3-container">Vicky y Dany</header>
     <nav class="dropdown">
   <label id="dibujo" for="toggle"></label>
  <input type="checkbox" id="toggle">
    
-	<ul id="menu"> 
+	<ul id="menu" class="w3-container"> 
         <li>Sesion de fotos 1er año</li>
         <li id="chanar" onclick="cambiagaleria()">En chañar</li>
         <li>En el bosque</li>
         <li>En la playa</li>
         <li>En el zoo</li>
-            </ul>
-            <section id="galeria">
+        </ul></nav>
+            <section class="w3-container" id="galeria">
 <img class="fotos" src="cha1.jpg"><br>
 <img class="fotos" src="cha2.jpg"><br>
 <img class="fotos" src="cha3.jpg"><br>
 <img class="fotos" src="cha4.jpg"><br>
             </section>
+    <footer class="w3-container"><a href="#top"><img id="piefoto" src="menu.svg"></a></footer>
 
 </body>
 </html>
