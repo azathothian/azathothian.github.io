@@ -2,114 +2,113 @@
 <html>
 <head>
 <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Griffy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Courgette|Gloria+Hallelujah|Kaushan+Script|Nova+Oval|Satisfy|Ubuntu+Condensed" rel="stylesheet">
 <title>Vicky y Dany</title>
 <link rel="stylesheet" href="w3.css">
-<style>
-* {margin:0;
-padding:0;}
-    
-    body {
-        background-color: #8e8793
-    }
-    
-#dibujo {
-	padding: 10% 20px;
-	background-image:url(menu.svg);
-	background-size:contain;
-	background-repeat:no-repeat;
-	position:fixed;
-    width: 10%;
-    opacity: 0.5}
-    
-#menu {
-	position:fixed;
-	margin-left: 2%;
-    margin-top: 10%;
-	background-color:#7e7683;
-	display: inline-block;
-	list-style:none;
-	display:none;
-	padding: 0.9%;
-    font-family: Griffy;
-    font-size: 2em;
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
-    
-}
-	#toggle:checked ~ ul {
-		display:inline-block}
-		#toggle {display:none}
-		
-    #galeria { width: 80%;
-       			margin:auto;
-        text-align: center;
-      		}
-    
-    #piefoto {
-        margin-right: 1%;
-        margin-bottom: 1%;
-        float: right;
-        width: 10%;
-        opacity: .5;
-        cursor: pointer
-    }
-    
-    .fotos {
-        width: 100%;
-        border-radius: 10%;
-        margin-top: 2%;
-        border-width: 2px;
-        border-style: solid;
-        border-color: #6f6476
-    }
-    header {
-        font-family: Griffy;
-        text-align: center;
-        font-size: 6em;
-        border-bottom-style: solid;
-        border-bottom-color: #7e7683}
-    
-    #galeria {
-    width: 100%; 
-        position: absolute;
-        overflow: hidden;
-        z-index: -1;
-        border: none;
-    }
-    footer {
-        position: relative;
-              margin-top: 280%
-    }
-    
- 
-    </style>
-    <script>
-    function cambiagaleria(gasa) {
-       var gasa;
-        document.getElementById('galeria').src = gasa;
-
-    }
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body { width: 100%;
+            background-color: #ffb553;
+            text-align: center;
+        }
+        p { 
+            display: inline-block;
+            font-family: Courgette;
+            text-align: center;
+            font-size: 4em;
+            color: #8e16d9;
+            text-shadow: 4px 4px orange
+        }
+        header { text-align: center;
+         z-index: 20;
+            position: fixed;
+            cursor: pointer
+        }
+       
+        .menu {
+            background-color: rgba(179, 134, 208, 0.46);
+            width: 70%;
+            position:relative;
+            font-family: Satisfy;
+            font-size: 3em;
+            opacity: 10;
+            color: #ffc355;
+             -webkit-text-stroke: 1px #8e16d9;
+            text-shadow: 1px 1px 2px black;
+            border-bottom-right-radius: 10%;
+            left: -100%;
+            z-index: -1;
+        cursor: pointer;
+                            }
         
+        .menu li a {
+                text-decoration: none;
+        }
+        header:hover .menu{
+            display: block;
+            left: 0%;
+            -webkit-transition: all 1s ease-in-out
+        }
+        
+        section {text-align: center;
+        padding-top: }
+      
+        .foto2 { width: 80%;
+            border-radius: 10%;
+            border-width: medium;
+            border-color: rgba(142, 22, 217, 0.46);
+            border-style: solid;
+            
+            
+        }
+        #tapa {
+            width: 100%;
+        }
+        #fotitos {
+            margin-top: -500px;
+/*               display: none */
+        }
+        #fotitos img {
+                 border-radius: 10%;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #a15bcc;
+            margin-top: 1%;
+            box-shadow: 6px 6px 8px orange
+        }
+    </style>
+<script>
+    function bosque1() {
+        document.getElementById('foto2').src = bos2.jpg;
+        
+    }
+    function zoo1() {
+         document.getElementById('foto1').src = "zoo1.jpg";
+        document.getElementById('foto2').src = "zoo2.jpg";
+        document.getElementById('foto3').src = "zoo3.jpg";
+        
+    }
+    function cha1() {
+         document.getElementById('foto1').src = "cha1.jpg";
+        document.getElementById('foto2').src = "cha2.jpg";
+        document.getElementById('foto3').src = "cha3.jpg";
+        
+    }
     </script>
 </head>
 <body>
-<header class="w3-container">Vicky y Dany</header>
-    <nav class="dropdown">
-  <label id="dibujo" for="toggle"></label>
- <input type="checkbox" id="toggle">
-   
-	<ul id="menu" class="w3-container"> 
-        <li>Sesion de fotos 1er año</li>
-        <li id="chanar" onclick="cambiagaleria('cha.html')">En chañar</li>
-        <li>En el bosque</li>
-        <li>En la playa</li>
-        <li id="zoo" onclick="cambiagaleria('zoo.html')">En el zoo</li>
-        </ul></nav>
-            <section class="w3-container" id="galeriacha">
-<iframe id="galeria" height="550%" width="100%"></iframe>
-            </section>
-    <footer class="w3-container"><a href="#top"><img id="piefoto" src="menu.svg"></a></footer>
-
+    <header><p>Vicky y Dany</p><ul class="menu"><li><a href="#" id="bosque" onclick="bosque1()">En el bosque</a></li><li><a id="chanar" href="#" onclick="cha1()">En Chanar</a></li><li><a href="#" id="zoo" onclick="zoo1()">En el Zoo</a></li></ul></header>
+    
+<section>
+    <img id="tapa" src="tapa.jpg">
+    <div id="fotitos">
+    <img id="foto1" src="cha1.jpg">
+    <img id="foto2" src="cha2.jpg">
+    <img id="foto3" src="cha3.jpg">
+    <img id="foto4" src="cha4.jpg"></div><br>
+    </section>
 </body>
 </html>
