@@ -50,7 +50,6 @@
             font-size: 2.5em;
             opacity: 10;
             color: #ffe6b9;
-/*             -webkit-text-stroke: 1px #8e16d9;*/
             text-shadow: 1px 1px 2px black;
             border-bottom-right-radius: 10%;
             left: -200%;
@@ -58,8 +57,8 @@
                    cursor: pointer;
             list-style: none
                             }
-        
-        .menu li a {
+ 
+         .menu li a {
                 text-decoration: none;
         }
         nav:hover .menu{
@@ -131,7 +130,11 @@
         text-shadow: 1px 1px black;
         }
         
-            
+        footer {
+            font-size: .8em;
+            text-align: right;
+            margin-right: 1%
+        }    
 
            
     </style>
@@ -166,25 +169,39 @@
          document.getElementById('foto5').src = "cha5.jpg";
               
     }
-        
+        function ses1() {
+          document.getElementById('tapa').style.opacity = '0.2';
+      document.getElementById('fotitos').style.display = 'block';
+        document.getElementById('foto1').src = "ses1.JPG";
+        document.getElementById('foto2').src = "ses2.JPG";
+        document.getElementById('foto3').src = "ses3.JPG";
+         document.getElementById('foto4').src = "ses4.JPG";
+         document.getElementById('foto5').src = "ses5.JPG";
+              
+    } 
+    
     </script>
 </head>
 <body>
     <header class="w3-container" id="titulo">Vicky y Dany</header>
     <nav class="w3-container"><label for="check">≡</label><input type="checkbox" id="check">
         <div id="todo">
-            <ul class="menu"><li><a href="#" id="cumple" onclick="cumple1()">Cumple 1 año</a></li><li><a id="chanar" href="#" onclick="cha1()">En Chañar</a></li><li><a href="#" id="zoo" onclick="zoo1()">En el Zoo</a></li></ul></div></nav>
+            <ul class="menu"><li id="li1"><a href="#" id="cumple" onclick="cumple1()">Cumple 1 año</a></li><li><a id="chanar" href="#" onclick="cha1()">En Chañar</a></li><li><a href="#" id="zoo" onclick="zoo1()">En el Zoo</a></li>
+            <li><a href="#" id="ses" onclick="ses1()">Sesión de fotos</a></li></ul></div></nav>
 
     
 <section class="w3-container">
     <img id="tapa" src="tapa.jpg">
     <div id="fotitos" class="w3-image">
-    <img id="foto1" src="cha1.jpg" class="w3-image">
-    <img id="foto2" src="cha2.jpg" class="w3-image">
-    <img id="foto3" src="cha3.jpg" class="w3-image">
-    <img id="foto4" src="cha4.jpg" class="w3-image">
-    <img id="foto5" src="cha5.jpg" class="w3-image">
-    </div><br>
-    </section>
-</body>
+    <img id="foto1" src="cha1.jpg" class="w3-image"><br/>
+    <img id="foto2" src="cha2.jpg" class="w3-image"><br/>
+    <img id="foto3" src="cha3.jpg" class="w3-image"><br/>
+    <img id="foto4" src="cha4.jpg" class="w3-image"><br/>
+    <img id="foto5" src="cha5.jpg" class="w3-image"><br/>
+
+  </div><br>
+
+     </section>
+<footer> v0.6b</footer>
+    </body>
 </html>
