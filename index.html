@@ -12,45 +12,59 @@
             padding: 0;
         }
         body { width: 100%;
-            background-color: #ffb553;
             text-align: center;
+       background: rgba(255,146,10,1);
+;
         }
-        p { 
-            display: inline-block;
-            font-family: Courgette;
-            text-align: center;
-            font-size: 4em;
+        
+        #titulo {
+            font-family: Comfortaa;
+            text-shadow: 3px 3px 5px #d49005;
+            font-size: 3em;
+            margin-left: 50%;
             color: #8e16d9;
-            text-shadow: 4px 4px orange
-        }
-        header { text-align: center;
+            float: left;
+                }
+ nav { text-align: center;
          z-index: 20;
             position: fixed;
             cursor: pointer
         }
+         p { 
+           display: inline-block;
+            font-family: Courgette;
+            text-align: center;
+            font-size: 3em;
+            color: #8e16d9;
+            text-shadow: 4px 4px orange;
+            background-color: rgba(155, 76, 204, 0.37);
+            padding-right: 10px;
+            border-bottom-right-radius: 10%
+        }
        
         .menu {
-            background-color: rgba(179, 134, 208, 0.46);
-            width: 70%;
+            width: 150%;
+            margin-top: 70%;            
             position:relative;
             font-family: Satisfy;
-            font-size: 3em;
+            font-size: 2.5em;
             opacity: 10;
-            color: #ffc355;
-             -webkit-text-stroke: 1px #8e16d9;
+            color: #ffe6b9;
+/*             -webkit-text-stroke: 1px #8e16d9;*/
             text-shadow: 1px 1px 2px black;
             border-bottom-right-radius: 10%;
-            left: -100%;
-            z-index: -1;
-        cursor: pointer;
+            left: -200%;
+            background-color: rgba(142, 22, 217, 0.61);
+                   cursor: pointer;
+            list-style: none
                             }
         
         .menu li a {
                 text-decoration: none;
         }
-        header:hover .menu{
+        nav:hover .menu{
             display: block;
-            left: 0%;
+            left: -45%;
             -webkit-transition: all 1s ease-in-out
         }
         
@@ -67,41 +81,104 @@
         }
         #tapa {
             width: 100%;
+               z-index: -100;
+            position: fixed;
+            margin-left: -50%;
+            margin-top: 4%;
+           
         }
         #fotitos {
+<<<<<<< HEAD
+            display: none;
+             
+=======
             margin-top: -0%;
 /*               display: none */
+>>>>>>> 756e856f3e2719a68224c9d4c687178969f2e9c5
         }
         #fotitos img {
                  border-radius: 10%;
-            border-width: 2px;
-            border-style: solid;
+            border-width: 4px;
+            border-style: double;
             border-color: #a15bcc;
-            margin-top: 1%;
-            box-shadow: 6px 6px 8px orange
+            margin-top: 5%;
+            box-shadow: 6px 6px 8px orange;
+            
+             
         }
+
+ 
+        #todo {
+/*                       display: none;*/
+            float: right;
+            position: relative;
+        }
+        #inicio {
+            float: left;
+            width: 10px;
+        }
+           input[type=checkbox]{
+    display: none;
+               }
+       
+    input:checked ~ #todo {
+            display: block;
+                    }
+     
+    label {
+            cursor: pointer;
+            font-size: 5em;
+            color: white;
+        text-shadow: 1px 1px black;
+        }
+        
+            
+
+           
     </style>
 <script>
-    function bosque1() {
-        document.getElementById('foto2').src = bos2.jpg;
+    function cumple1() {
+         document.getElementById('fotitos').style.display = 'block';
+                document.getElementById('tapa').style.opacity = '0.2';
+        document.getElementById('foto1').src = "cump1.jpg";
+        document.getElementById('foto2').src = "cump2.jpg";
+        document.getElementById('foto3').src = "cump3.jpg";
+        document.getElementById('foto4').src = "cump4.jpg";
+        document.getElementById('foto5').src = "cump5.jpg";
         
     }
     function zoo1() {
-         document.getElementById('foto1').src = "zoo1.jpg";
+        document.getElementById('fotitos').style.display = 'block';
+        document.getElementById('tapa').style.opacity = '0.2';
+        document.getElementById('foto1').src = "zoo1.jpg";
         document.getElementById('foto2').src = "zoo2.jpg";
         document.getElementById('foto3').src = "zoo3.jpg";
+        document.getElementById('foto4').src = "zoo4.jpg";
+        document.getElementById('foto5').src = "zoo5.jpg";
         
     }
     function cha1() {
-         document.getElementById('foto1').src = "cha1.jpg";
+          document.getElementById('tapa').style.opacity = '0.2';
+          document.getElementById('fotitos').style.display = 'block';
+             document.getElementById('foto1').src = "cha1.jpg";
         document.getElementById('foto2').src = "cha2.jpg";
         document.getElementById('foto3').src = "cha3.jpg";
-        
+         document.getElementById('foto4').src = "cha4.jpg";
+         document.getElementById('foto5').src = "cha5.jpg";
+              
     }
+        
     </script>
 </head>
 <body>
+<<<<<<< HEAD
+    <header class="w3-container" id="titulo">Vicky y Dany</header>
+    <nav class="w3-container"><label for="check">≡</label><input type="checkbox" id="check">
+        <div id="todo">
+            <ul class="menu"><li><a href="#" id="cumple" onclick="cumple1()">Cumple 1 año</a></li><li><a id="chanar" href="#" onclick="cha1()">En Chañar</a></li><li><a href="#" id="zoo" onclick="zoo1()">En el Zoo</a></li></ul></div></nav>
+=======
     <header class="w3-container"><p>Vicky y Dany</p><ul class="menu"><li><a href="#" id="bosque" onclick="bosque1()">En el bosque</a></li><li><a id="chanar" href="#" onclick="cha1()">En Chanar</a></li><li><a href="#" id="zoo" onclick="zoo1()">En el Zoo</a></li></ul></header>
+>>>>>>> 756e856f3e2719a68224c9d4c687178969f2e9c5
     
 <section class="w3-container">
     <img id="tapa" src="tapa.jpg">
@@ -109,7 +186,12 @@
     <img id="foto1" src="cha1.jpg" class="w3-image">
     <img id="foto2" src="cha2.jpg" class="w3-image">
     <img id="foto3" src="cha3.jpg" class="w3-image">
+<<<<<<< HEAD
+    <img id="foto4" src="cha4.jpg" class="w3-image">
+    <img id="foto5" src="cha5.jpg" class="w3-image"></div><br>
+=======
     <img id="foto4" src="cha4.jpg" class="w3-image"></div><br>
+>>>>>>> 756e856f3e2719a68224c9d4c687178969f2e9c5
     </section>
 </body>
 </html>
