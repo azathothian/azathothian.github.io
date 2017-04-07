@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Macondo|Press+Start+2P|Spirax" rel="stylesheet">
-
     <style type="text/css">
     * {
     margin: 0;
     padding: 0
     }
     body {
-    background-color: #F3B33E
+    background-color: #F3B33E;
+    height: 100%
     }
-     .navbar-nav {
+    .navbar-nav {
     width: 100%;
     text-align: center;
     > li {
@@ -24,78 +24,122 @@
     }
     }
     #tapa {
-      width: 100%
+    width: 100%
     }
-  .fotos {
-      margin-top: 10px;
-      box-shadow: 5px 5px 10px black;
-      padding: 0;
-      border-radius: 5px;
-      border-width: 1px;
-      border-color: black;
-      border-style: solid
+    .fotos {
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px black;
+    padding: 0;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid
     }
     #titula, #galeria {
-      display: none
+    display: none
     }
     #titula {
-      text-align: center;
-      font-size: 2em;
-      font-family: Macondo;
-      text-shadow: 4px 4px 5px #DF950E;
-      border-bottom-style: solid;
-      border-bottom-width: 2px;
-      border-bottom-color: #DBA33D
-
+    text-align: center;
+    font-size: 2em;
+    font-family: Macondo;
+    text-shadow: 4px 4px 5px #DF950E;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #DBA33D
     }
-
+    .navbar {
+    background-color: orange;
+    border-width: 0;
+    text-align: center;
+    position: relative;
+    }
     #cabeza {
-      font-family: Spirax;
-      font-size: 1.5em
+    font-family: Spirax;
+    font-size: 1.5em;
+    position:
     }
     @media (min-width: 992px) {
-#cabeza {
-      font-family: Spirax;
-      font-size: 3.5em
+    #cabeza {
+    font-family: Spirax;
+    font-size: 3em;
     }
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #f00; /* Changes regular toggle color
-
-        </style>
+    .row {
+      width: 100%}
+    }
+    }
+    #btnn {
+    background-color: #F3B33E;
+    border-color: white
+    }
+    #btnn:hover {
+    background-color: #F4C369
+    }
+    .navbar .navbar-toggle .icon-bar {
+    background-color: #5E5E5EFF; /* Changes regular toggle color */
+    }
+    #op4, #op2 {
+    background-color: #F3B33E;
     
+    }
+    footer {
+    bottom: 0;
+    position: fixed;
+    right: 0
+    }
+    </style>
     
+    <script>
+    $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+    // Prevent default anchor click behavior
+    event.preventDefault();
+    // Store hash
+    var hash = this.hash;
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+    scrollTop: $(hash).offset().top
+    }, 900, function(){
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+    });
+    } // End if
+    });
+    })
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-               var fotox = document.getElementsByClassName("fotos");
-            for (i=0; i<fotox.length; i++) ;
-           function cambia(base,texto) {
-
-             document.getElementById("titula").innerHTML=texto;
-             document.getElementById("titula").style.display="Block";
-              document.getElementById("galeria").style.display="Block";
-              document.getElementById("tapa").style.display="none";
-            
-            fotox[0].src = base+"1.jpg";
-            fotox[1].src = base+"2.jpg"; 
-            fotox[2].src = base+"3.jpg"; 
-            fotox[3].src = base+"4.jpg"; 
-            fotox[4].src = base+"5.jpg";  
-          }
-        function inicio() {
-           document.getElementById("titula").style.display="none";
-              document.getElementById("galeria").style.display="none";
-              document.getElementById("tapa").style.display="Block";
-        }
-      
+    var fotox = document.getElementsByClassName("fotos");
+    for (i=0; i<fotox.length; i++) ;
+    function cambia(base,texto) {
+    document.getElementById("titula").innerHTML=texto;
+    document.getElementById("titula").style.display="Block";
+    document.getElementById("galeria").style.display="Block";
+    document.getElementById("tapa").style.display="none";
+    
+    fotox[0].src = base+"1.jpg";
+    fotox[1].src = base+"2.jpg";
+    fotox[2].src = base+"3.jpg";
+    fotox[3].src = base+"4.jpg";
+    fotox[4].src = base+"5.jpg";
+    }
+    function inicio() {
+    document.getElementById("titula").style.display="none";
+    document.getElementById("galeria").style.display="none";
+    document.getElementById("tapa").style.display="Block";
+    }
+    
     </script>
   </head>
   <body>
     <nav class="navbar navbar-default menu" role="navigation">
       <div class="container-fluid">
-        <div id="titulo" class="navbar-header ">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".barra">
+        <div id="titulo" class="navbar-header">
+          <button type="button" id="btnn" class="navbar-toggle" data-toggle="collapse" data-target=".barra">
           <span class="sr-only">Desplegar navegación</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -105,33 +149,30 @@
         </div>
         
         <div class="collapse navbar-collapse barra">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav center-block">
             <li id="op1"><a href="#" onclick="cambia('cha','En Chañar')">En chañar</a></li>
             <li id="op2"><a href="#" onclick="cambia('cump','1er. cumple')">1er. Cumple</a></li>
             <li id="op3"><a href="#" onclick="cambia('zoo','En el Zoo')">En el zoo</a></li>
             <li id="op4"><a href="#" onclick="cambia('ses','Sesion de fotos')">Sesion de fotos</a></li>
-
           </ul>
         </div>
         
       </div>
     </nav>
-
     <img id="tapa" class="img-responsive" src="tapa.jpg">
-<div class="container" id="galeria">
-<div class="header" id="titula">En chanar</div>
-  <div class="row">
-    <ul>
-      <div class="col-md-3 col-sm-4 col-xs-6">
-      <img id="foto1" class="img-responsive fotos img1" src="cha1.jpg"/></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img id="foto2" class="img-responsive fotos img1" src="cha2.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img id="foto3" class="img-responsive fotos img1" src="cha3.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img id="foto4" class="img-responsive fotos img1" src="cha4.jpg" /></div>
-      <div class="col-md-3 col-sm-4 col-xs-6"><img id="foto5" class="img-responsive fotos img1" src="cha5.jpg" /></div>
-    </ul>
-  </div>
-</div>
-
-      <footer class="footer"></footer>
-    </body>
-  </html>
+    <div class="container" id="galeria">
+      <div class="header" id="titula">En chanar</div>
+      <div class="row">
+        <ul>
+          <div class="col-md-3 col-sm-4 col-xs-12">
+          <img id="foto1" class="img-responsive fotos img1" src="cha1.jpg"/></div>
+          <div class="col-md-3 col-sm-4 col-xs-12"><img id="foto2" class="img-responsive fotos img1" src="cha2.jpg" /></div>
+          <div class="col-md-3 col-sm-4 col-xs-12"><img id="foto3" class="img-responsive fotos img1" src="cha3.jpg" /></div>
+          <div class="col-md-3 col-sm-4 col-xs-12"><img id="foto4" class="img-responsive fotos img1" src="cha4.jpg" /></div>
+          <div class="col-md-3 col-sm-4 col-xs-12"><img id="foto5" class="img-responsive fotos img1" src="cha5.jpg" /></div>
+        </ul>
+      </div>
+    </div>
+  <footer class="footer" align='right'>2017</footer>
+</body>
+</html>
